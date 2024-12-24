@@ -11,3 +11,6 @@ __pycache__/
 # System files
 .DS_Store
 Thumbs.db
+
+# Add mlops_project_env
+mlops_project_env/
