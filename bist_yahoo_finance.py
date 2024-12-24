@@ -12,7 +12,6 @@ with open(file_path, "r") as file:
 # Sonuçları kontrol et
 print(bist_symbols)
 
-
 # Sonuçları saklamak için boş bir liste
 all_data = []
 
@@ -49,9 +48,9 @@ for symbol in bist_symbols:
         all_data.append({
             "Hisse": symbol,
             "Adı": info.get("shortName", "Bilinmiyor"),
-            "Sektör": info.get("sector", "Bilinmiyor"),  # Sektör bilgisi
-            "Alt Grup": info.get("industry", "Bilinmiyor"),  # Alt grup bilgisi
-            "Açıklama": info.get("longBusinessSummary", "Bilinmiyor"),  # Şirket açıklaması
+            "Sektör": info.get("sector", "Bilinmiyor"),
+            "Alt Grup": info.get("industry", "Bilinmiyor"),
+            "Açıklama": info.get("longBusinessSummary", "Bilinmiyor"),
             "Beta": info.get("beta", "Bilinmiyor"),
             "Fiyat/Kazanç Oranı": info.get("trailingPE", "Bilinmiyor"),
             "PD/DD Oranı": info.get("priceToBook", "Bilinmiyor"),
@@ -82,7 +81,7 @@ for symbol in bist_symbols:
 # Verileri bir DataFrame'e dönüştür
 df = pd.DataFrame(all_data)
 
-# Sonuçları CSV dosyasına kaydet
-df.to_csv("bist_tum_hisseler_verileri.csv", index=False)
+# Sonuçları CSV dosyasına UTF-8 BOM ile kaydet
+df.to_csv("bist_tum_hisseler_verileri.csv", index=False, encoding='utf-8-sig')
 
 print("Tüm BIST hisseleri başarıyla bist_tum_hisseler_verileri.csv dosyasına kaydedildi!")
