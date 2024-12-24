@@ -2,13 +2,6 @@ import yfinance as yf
 import pandas as pd
 import numpy as np
 
-# # Tüm BIST hisseleri listesi
-# bist_symbols = [
-#     "GARAN.IS", "AKBNK.IS", "THYAO.IS", "ISCTR.IS", "YKBNK.IS",
-#     "KCHOL.IS", "TUPRS.IS", "EREGL.IS", "PETKM.IS", "TOASO.IS"
-#     # Tüm diğer BIST hisselerini buraya ekleyin
-# ]
-
 # Hisse sembollerini içeren text dosyasının yolu
 file_path = "bist_symbols_with_IS.txt"
 
