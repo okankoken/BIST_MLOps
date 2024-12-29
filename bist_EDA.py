@@ -7,12 +7,11 @@ pd.set_option('display.expand_frame_repr', False)
 pd.set_option('display.float_format', lambda x: '%.5f' % x)
 
 # CSV dosyasını oku
-file_path = "bist_tum_hisseler_verileri.csv"
-df = pd.read_csv(file_path)
+df = pd.read_csv(r"D:\VBO_MLOps_Bootcamp_4\BIST_MLOps\bist_tum_hisseler_verileri_utf8.csv")
 
 # Veriyi kontrol et
 print("İlk 5 Satır:")
-print(df.head(50))
+print(df.head(10))
 
 # Eksik değerleri kontrol et
 missing_values = df.isnull().sum()

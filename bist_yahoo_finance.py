@@ -82,6 +82,6 @@ for symbol in bist_symbols:
 df = pd.DataFrame(all_data)
 
 # Sonuçları CSV dosyasına UTF-8 BOM ile kaydet
-df.to_csv("bist_tum_hisseler_verileri.csv", index=False, encoding='utf-8-sig')
+df.to_csv("bist_tum_hisseler_verileri_utf8.csv", index=False, encoding='utf-8-sig')
 
 print("Tüm BIST hisseleri başarıyla bist_tum_hisseler_verileri.csv dosyasına kaydedildi!")
