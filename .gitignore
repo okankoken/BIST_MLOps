@@ -1,7 +1,6 @@
 # Virtual environment
 Include/
 Lib/
-Scripts/
 *.pyc
 __pycache__/
 
